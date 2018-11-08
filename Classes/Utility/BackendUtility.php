@@ -101,7 +101,7 @@ class BackendUtility
                     $typeNum = (int)GeneralUtility::_GP('type');
                 }
                 if (!is_object($GLOBALS['TT'])) {
-                    $GLOBALS['TT'] = new NullTimeTracker;
+                    $GLOBALS['TT'] = new TimeTracker;
                     $GLOBALS['TT']->start();
                 }
                 $GLOBALS['TSFE'] = GeneralUtility::makeInstance(
